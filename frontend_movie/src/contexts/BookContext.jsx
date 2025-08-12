@@ -6,13 +6,13 @@ const BookContext = createContext();
 export const useBookContext = () => useContext(BookContext);
 
 export const BookProvider = ({ children }) => {
-  const [bookFavorites, setBookFavorites] = useState([]);
-
-  useEffect(() => {
+  // Load from localStorage immediately
+  const [bookFavorites, setBookFavorites] = useState(() => {
     const stored = localStorage.getItem("bookFavorites");
-    if (stored) setBookFavorites(JSON.parse(stored));
-  }, []);
+    return stored ? JSON.parse(stored) : [];
+  });
 
+  // Save to localStorage whenever bookFavorites changes
   useEffect(() => {
     localStorage.setItem("bookFavorites", JSON.stringify(bookFavorites));
   }, [bookFavorites]);
