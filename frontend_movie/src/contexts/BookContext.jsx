@@ -29,11 +29,19 @@ export const BookProvider = ({ children }) => {
     return bookFavorites.some((book) => book.id === bookId);
   };
 
+  const clearBookFavorites = () => {
+    setBookFavorites([]);
+  };
+
+  const favoritesBookCount = bookFavorites.length;
+
   const value = {
     bookFavorites,
     addToBookFavorites,
     removeFromBookFavorites,
     isBookFavorite,
+    // clearBookFavorites,
+    favoritesBookCount
   };
 
   return (

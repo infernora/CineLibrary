@@ -1,0 +1,156 @@
+.compare-page {
+  max-width: 1200px;
+  
+  padding: 0 1rem;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.compare-page h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  color: #415E72;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.clear-btn {
+  display: block;
+  margin: 0 auto 2rem auto;
+  background-color: #415E72;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #17313E;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  width: fit-content;
+  min-width: 140px;
+}
+
+.clear-btn:hover {
+  background-color: #b70a10;
+  box-shadow: 0 6px 18px rgba(183, 10, 16, 0.8);
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.compare-card {
+  background: #C5B0CD;
+  border-radius: 15px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease;
+  user-select: none;
+}
+
+.compare-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px #C5B0CD;
+}
+
+.compare-poster {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+
+.no-cover {
+  width: 100%;
+  height: 320px;
+  background: #333;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.compare-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  color: #415E72;
+}
+
+.compare-card p {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: #17313E;
+  margin: 0.3rem 0;
+}
+
+.compare-overview {
+  margin-top: 0.8rem;
+  font-style: italic;
+  color: #415E72;
+  max-height: 5.5em;
+  overflow: auto;
+  padding-right: 0.3rem;
+}
+
+.remove-btn {
+  margin-top: auto;
+  background-color: #415E72;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  align-self: center;
+  width: 100%;
+  max-width: 180px;
+  
+}
+
+.remove-btn:hover {
+  background-color: #17313E;
+}
+
+.compare-empty {
+  padding: 4rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #666;
+  text-align: center;
+  user-select: none;
+}
+
+/* Scrollbar styling for overview text */
+.compare-overview::-webkit-scrollbar {
+  width: 6px;
+}
+
+.compare-overview::-webkit-scrollbar-track {
+  background: #17313E;
+  border-radius: 10px;
+}
+
+.compare-overview::-webkit-scrollbar-thumb {
+  background-color: #415E72;
+  border-radius: 10px;
+}
